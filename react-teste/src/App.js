@@ -10,7 +10,8 @@ const App = () => {
   const fetchCatImage = async () => {
     setLoading(true); // Define loading como verdadeiro ao iniciar a requisição
     try {
-      const response = await axios.get('http://localhost:3001/api/cats');
+      // Substitua a URL abaixo pela URL do seu backend na Vercel
+      const response = await axios.get('https://backend-jit9qnznw-azumes-projects-6bacfaa3.vercel.app/api/cats');
       setCatUrl(response.data.cat);
       setLoading(false); // Define loading como falso após a resposta
     } catch (err) {
@@ -27,7 +28,7 @@ const App = () => {
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
       <h1>Aqui está um gatinho para você!</h1>
-      {loading && <p></p>}
+      {loading && <p>Carregando...</p>}
       {error && <p>{error}</p>}
       {catUrl && <img src={catUrl} alt="Gatinho" style={{ width: '300px', height: 'auto', borderRadius: '8px' }} />}
       
