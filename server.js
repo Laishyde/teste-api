@@ -9,6 +9,11 @@ const PORT = process.env.PORT || 3001;
 // Middleware para permitir CORS
 app.use(cors());
 
+// Rota para retornar "Hello"
+app.get('/hello', (req, res) => {
+  res.send('Hello Lais');
+});
+
 // Rota para obter gatinhos aleatórios
 app.get('/api/cats', async (req, res) => {
   try {
