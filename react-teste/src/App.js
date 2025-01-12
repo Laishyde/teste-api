@@ -11,8 +11,8 @@ const App = () => {
     setLoading(true); // Define loading como verdadeiro ao iniciar a requisição
     try {
       // Substitua a URL abaixo pela URL do seu backend na Vercel
-      const response = await axios.get('https://backend-jit9qnznw-azumes-projects-6bacfaa3.vercel.app/api/cats');
-      setCatUrl(response.data.cat);
+      const response = await axios.get('https://testando-ewbe.vercel.app/'); // Ajuste a URL aqui
+      setCatUrl(response.data[0].url); // Ajuste para acessar o URL correto da resposta
       setLoading(false); // Define loading como falso após a resposta
     } catch (err) {
       setError('Não foi possível obter a imagem do gatinho.');
