@@ -1,4 +1,10 @@
 {
+  "name": "meu-backend",
+  "version": "1.0.0",
+  "main": "server.js", // ou o nome do seu arquivo principal
+  "scripts": {
+    "start": "node server.js" // Altere 'server.js' para o nome do seu arquivo principal, se necessário
+  },
   "dependencies": {
     "axios": "^1.7.9",
     "cors": "^2.8.5",
