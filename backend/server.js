@@ -28,6 +28,7 @@ app.use(express.static(path.join(__dirname, '../react-teste/build')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../react-teste/build', 'index.html'));
 });
+console.log(path.join(__dirname, '../react-teste/build', 'index.html'));
 
 // Inicia o servidor
 app.listen(PORT, () => {
